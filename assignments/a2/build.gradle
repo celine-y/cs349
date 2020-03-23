@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+apply plugin : 'application'
+mainClassName = "Main"
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['game/src']
+        }
+        resources {
+            srcDirs = ['game/src/resources']
+        }
+    }
+}
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
